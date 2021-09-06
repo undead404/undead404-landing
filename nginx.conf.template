@@ -1,0 +1,10 @@
+server {
+  listen $PORT default_server;
+  index index.html;
+
+  root   /usr/share/nginx/html;
+  server_name undead404-landing-docker.herokuapp.com;
+  location / {
+    try_files $uri $uri/ =404;
+  }
+}

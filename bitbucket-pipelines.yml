@@ -20,25 +20,25 @@ pipelines:
     main:
       - step: *Install-dependencies
       - step: *Check
-      # - step:
-      #     artifacts:
-      #       - undead404-landing.tar.gz
-      #     caches:
-      #       - node
-      #     name: Build
-      #     script:
-      #       - yarn build
-      #       - tar -czvf undead404-landing.tar.gz build/*
-      # - step:
-      #     deployment: production
-      #     name: Deploy
-      #     script:
-      #       - pipe: "atlassian/heroku-deploy:1.1.2"
-      #         variables:
-      #           DEBUG: "true"
-      #           HEROKU_API_KEY: $HEROKU_API_KEY
-      #           HEROKU_APP_NAME: $HEROKU_APP_NAME
-      #           ZIP_FILE: shukannia-api.tar.gz
+      - step:
+          artifacts:
+            - undead404-landing.tar.gz
+          caches:
+            - node
+          name: Build
+          script:
+            - yarn build
+            - tar -czvf undead404-landing.tar.gz build/*
+      - step:
+          deployment: production
+          name: Deploy
+          script:
+            - pipe: "atlassian/heroku-deploy:1.1.2"
+              variables:
+                DEBUG: "true"
+                HEROKU_API_KEY: $HEROKU_API_KEY
+                HEROKU_APP_NAME: $HEROKU_APP_NAME
+                ZIP_FILE: shukannia-api.tar.gz
   default:
     - step: *Install-dependencies
     - step: *Check
