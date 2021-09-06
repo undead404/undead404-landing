@@ -33,12 +33,13 @@ pipelines:
           deployment: production
           name: Deploy
           script:
-            - pipe: "atlassian/heroku-deploy:1.1.2"
+            - pipe: "atlassian/heroku-deploy:1.2.1"
               variables:
                 DEBUG: "true"
                 HEROKU_API_KEY: $HEROKU_API_KEY
                 HEROKU_APP_NAME: $HEROKU_APP_NAME
-                ZIP_FILE: shukannia-api.tar.gz
+                WAIT: "true"
+                ZIP_FILE: undead404-landing.tar.gz
   default:
     - step: *Install-dependencies
     - step: *Check
