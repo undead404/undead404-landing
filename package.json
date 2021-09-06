@@ -27,7 +27,8 @@
     "deploy:surge": "surge build --domain=undead404.surge.sh",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
