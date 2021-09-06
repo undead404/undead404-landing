@@ -12,7 +12,7 @@ definitions:
           - node
         name: Check
         script:
-          - "yarn audit"
+          - "yarn lint"
           - "yarn test"
 image: "node:14"
 pipelines:
