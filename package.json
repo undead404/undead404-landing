@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "antd": "~4.16.13",
+    "i18next": "~20.6.0",
+    "i18next-browser-languagedetector": "~6.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "~11.11.4",
     "react-social-icons": "~5.6.1",
     "web-vitals": "^1.0.1"
   },
@@ -43,6 +46,7 @@
     "deploy:heroku": "git push bb",
     "deploy:heroku:docker": "heroku container:push web -a undead404-landing-docker && heroku container:release web -a undead404-landing-docker",
     "deploy:surge": "surge build --domain=undead404.surge.sh",
+    "deploy:vercel": "git push origin",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "start": "react-scripts start",

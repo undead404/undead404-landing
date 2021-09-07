@@ -1,4 +1,4 @@
 .root {
-  color: white;
-  line-height: 64px;
+  color: white !important;
+  line-height: 64px !important;
 }

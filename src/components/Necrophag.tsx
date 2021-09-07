@@ -1,4 +1,5 @@
 import { Card } from 'antd';
+import { useTranslation } from 'react-i18next';
 import { SocialIcon } from 'react-social-icons';
 
 const video = (
@@ -15,8 +16,12 @@ const video = (
   </div>
 );
 export default function Necrophag(): JSX.Element {
+  const { t } = useTranslation();
   return (
-    <Card cover={video} title="You may check my primitive thrash metal band">
+    <Card
+      cover={video}
+      title={t('You may check my primitive thrash metal band')}
+    >
       <Card.Meta
         title="Necrophag"
         description={
