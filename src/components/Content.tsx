@@ -1,19 +1,19 @@
-import family from "../elements/family";
-import me from "../elements/me";
-import necrophag from "../elements/necrophag";
-import pets from "../elements/pets";
-import thanks from "../elements/thanks";
-import ymh from "../elements/ymh";
+import Family from './Family';
+import Me from './me';
+import Necrophag from './necrophag';
+import Pets from './Pets';
+import Thanks from './thanks';
+import YouMustHear from './YouMustHear';
 
 export default function MyContent(): JSX.Element {
   return (
     <>
-      {me}
-      {ymh}
-      {necrophag}
-      {family}
-      {pets}
-      {thanks}
+      <Me />
+      <YouMustHear />
+      <Necrophag />
+      <Family />
+      <Pets />
+      <Thanks />
     </>
   );
 }

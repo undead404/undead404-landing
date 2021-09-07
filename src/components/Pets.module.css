@@ -1,0 +1,8 @@
+.photo {
+  max-width: 480px;
+}
+
+.photoWrapper {
+  display: flex;
+  justify-content: center;
+}

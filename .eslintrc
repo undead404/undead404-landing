@@ -1,0 +1,132 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:jest/all",
+    "prettier"
+  ],
+  "globals": {
+    "chrome": true,
+    "JSX": true
+  },
+  "overrides": [
+    {
+      "env": {
+        "jest/globals": true
+      },
+      "files": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "setupTests.ts"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "no-magic-numbers": "off",
+        "node/no-extraneous-import": "off"
+      }
+    },
+    {
+      "files": [
+        "**/*.tsx"
+      ],
+      "rules": {
+        "unicorn/no-null": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "promise",
+    "react-perf",
+    "simple-import-sort",
+    "unicorn",
+    "jest",
+    "import",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-shadow": "error",
+    "import/order": 0,
+    "no-plusplus": 0,
+    "no-restricted-globals": 0,
+    "no-use-before-define": 0,
+    "no-unused-vars": 0,
+    "no-shadow": 0,
+    "react-perf/jsx-no-jsx-as-prop": "warn",
+    "react-perf/jsx-no-new-array-as-prop": "warn",
+    "react-perf/jsx-no-new-function-as-prop": "warn",
+    "react-perf/jsx-no-new-object-as-prop": "warn",
+    "react/destructuring-assignment": 0,
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          [
+            "^@?\\w"
+          ],
+          [
+            "^\\u0000"
+          ],
+          [
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$"
+          ],
+          [
+            "^\\.(?!/?$)",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\./?$"
+          ],
+          [
+            "^.+\\.s?css$"
+          ],
+          [
+            "^.+\\.(jpe?g)|(png)|(webp)$"
+          ]
+        ]
+      }
+    ],
+    "unicorn/filename-case": 0,
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}

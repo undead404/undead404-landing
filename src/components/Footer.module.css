@@ -1,0 +1,9 @@
+.lastfmLink {
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.lastfmLink svg {
+  fill: #d92323;
+}
