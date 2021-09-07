@@ -40,6 +40,7 @@
   },
   "scripts": {
     "build": "react-scripts build && cp static.json ./build/",
+    "deploy:heroku": "git push bb",
     "deploy:heroku:docker": "heroku container:push web -a undead404-landing-docker && heroku container:release web -a undead404-landing-docker",
     "deploy:surge": "surge build --domain=undead404.surge.sh",
     "eject": "react-scripts eject",

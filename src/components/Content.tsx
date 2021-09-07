@@ -1,8 +1,8 @@
 import Family from './Family';
-import Me from './me';
-import Necrophag from './necrophag';
+import Me from './Me';
+import Necrophag from './Necrophag';
 import Pets from './Pets';
-import Thanks from './thanks';
+import Thanks from './Thanks';
 import YouMustHear from './YouMustHear';
 
 export default function MyContent(): JSX.Element {
